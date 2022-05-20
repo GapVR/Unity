@@ -84,11 +84,11 @@ public class MaterialList: EditorWindow
 			}
 
 #if VRC_SDK_VRCSDK3 && !UDON
-			EditorGUILayout.Space();
-
 			VRCAvatarDescriptor descriptor = obj.GetComponent<VRCAvatarDescriptor>();
 			if (descriptor != null)
 			{
+				EditorGUILayout.Space();
+
 				IEnumerable<AnimationClip> clips = descriptor.baseAnimationLayers.Select(l => l.animatorController).Where(a => a != null).SelectMany(a => a.animationClips).Distinct();
 				GUILayout.Label("Animators (Animation)", EditorStyles.boldLabel);
 				foreach (AnimationClip clip in clips)
