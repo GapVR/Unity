@@ -1,5 +1,5 @@
 // Unity Editor Material List Tool
-// v0.1 220520 https://github.com/GapVR
+// v0.2 220520 https://github.com/GapVR
 // Reference: Thry's Avatar Evaluator, https://github.com/Thryrallo/VRCAvatarTools/
 
 #if UNITY_EDITOR
@@ -27,17 +27,22 @@ public class MaterialList: EditorWindow
 
 	GameObject obj;
 	Vector2 scrollpos;
+	bool lockObject;
+
+	void OnInspectorUpdate()
+	{
+		Repaint();
+	}
 
 	private void OnGUI()
 	{
 		bool includeInactive = true;
 
-		EditorGUILayout.Space();
-
-		GameObject obj = Selection.activeObject as GameObject;
-
 		EditorGUI.BeginChangeCheck();
 		obj = (GameObject)EditorGUILayout.ObjectField("GameObject", obj, typeof(GameObject), true);
+		lockObject = EditorGUILayout.ToggleLeft("Lock", lockObject);
+		if (!lockObject)
+			obj = Selection.activeObject as GameObject;
 		EditorGUI.EndChangeCheck();
 
 		if (obj != null)
@@ -113,6 +118,8 @@ public class MaterialList: EditorWindow
 			{
 				EditorGUILayout.ObjectField(m, typeof(Material), false);
 			}
+
+			EditorGUILayout.Space();
 
 			EditorGUILayout.EndScrollView();
 		}
