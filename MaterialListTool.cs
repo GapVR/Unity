@@ -1,5 +1,5 @@
 // Unity Editor Material List Tool
-// v0.2 220520 https://github.com/GapVR
+// v0.3 220520 https://github.com/GapVR
 // Reference: Thry's Avatar Evaluator, https://github.com/Thryrallo/VRCAvatarTools/
 
 #if UNITY_EDITOR
@@ -26,34 +26,50 @@ public class MaterialList: EditorWindow
 	}
 
 	GameObject obj;
+	GameObject lastobj;
 	Vector2 scrollpos;
 	bool lockObject;
+
+	List<Material> allMats;
+	List<SkinnedMeshRenderer> rendererSkinned;
+	List<MeshRenderer> rendererMesh;
+	List<Tuple<AnimationClip, Material>> LclipMats;
 
 	void OnInspectorUpdate()
 	{
 		Repaint();
 	}
 
+	public MaterialList()
+	{
+		allMats = new List<Material>();
+		rendererSkinned = new List<SkinnedMeshRenderer>();
+		rendererMesh = new List<MeshRenderer>();
+		LclipMats = new List<Tuple<AnimationClip, Material>>();
+	}
+
 	private void OnGUI()
 	{
 		bool includeInactive = true;
 
-		EditorGUI.BeginChangeCheck();
 		obj = (GameObject)EditorGUILayout.ObjectField("GameObject", obj, typeof(GameObject), true);
 		lockObject = EditorGUILayout.ToggleLeft("Lock", lockObject);
 		if (!lockObject)
 			obj = Selection.activeObject as GameObject;
-		EditorGUI.EndChangeCheck();
 
 		if (obj != null)
 		{
+			if (lastobj != obj)
+			{
+				allMats.Clear();
+				LclipMats.Clear();
+			}
+
 			EditorGUILayout.Space();
 
 			scrollpos = EditorGUILayout.BeginScrollView(scrollpos);
 
-			List<Material> allMats = new List<Material>();
-
-			List<SkinnedMeshRenderer> rendererSkinned = obj.GetComponentsInChildren<SkinnedMeshRenderer>(includeInactive).ToList();
+			if (lastobj != obj) rendererSkinned = obj.GetComponentsInChildren<SkinnedMeshRenderer>(includeInactive).ToList();
 			GUILayout.Label("Skinned Mesh Renderers (" + rendererSkinned.Count().ToString() + ")", EditorStyles.boldLabel);
 			foreach (SkinnedMeshRenderer r in rendererSkinned)
 			{
@@ -62,14 +78,14 @@ public class MaterialList: EditorWindow
 				foreach (Material m in r.sharedMaterials.Distinct().ToList())
 				{
 					EditorGUILayout.ObjectField(m, typeof(Material), false);
-					allMats.Add(m);
+					if (lastobj != obj) allMats.Add(m);
 				}
 				EditorGUI.indentLevel -= 2;
 			}
 
 			EditorGUILayout.Space();
 
-			List<MeshRenderer> rendererMesh = obj.GetComponentsInChildren<MeshRenderer>(includeInactive).ToList();
+			if (lastobj != obj) rendererMesh = obj.GetComponentsInChildren<MeshRenderer>(includeInactive).ToList();
 			GUILayout.Label("Mesh Renderers (" + rendererMesh.Count().ToString() + ")", EditorStyles.boldLabel);
 			foreach (MeshRenderer r in rendererMesh)
 			{
@@ -78,37 +94,49 @@ public class MaterialList: EditorWindow
 				foreach (Material m in r.sharedMaterials.Distinct().ToList())
 				{
 					EditorGUILayout.ObjectField(m, typeof(Material), false);
-					allMats.Add(m);
+					if (lastobj != obj) allMats.Add(m);
 				}
 				EditorGUI.indentLevel -= 2;
 			}
 
 #if VRC_SDK_VRCSDK3 && !UDON
-			VRCAvatarDescriptor descriptor = obj.GetComponent<VRCAvatarDescriptor>();
-			if (descriptor != null)
-			{
-				EditorGUILayout.Space();
-
-				IEnumerable<AnimationClip> clips = descriptor.baseAnimationLayers.Select(l => l.animatorController).Where(a => a != null).SelectMany(a => a.animationClips).Distinct();
-				GUILayout.Label("Animators (Animation)", EditorStyles.boldLabel);
-				foreach (AnimationClip clip in clips)
+				if (lastobj != obj)
 				{
-					IEnumerable<Material> clipMaterials = AnimationUtility.GetObjectReferenceCurveBindings(clip).Where(b => b.isPPtrCurve && b.type.IsSubclassOf(typeof(Renderer)) && b.propertyName.StartsWith("m_Materials")).SelectMany(b => AnimationUtility.GetObjectReferenceCurve(clip, b)).Select(r => r.value as Material);
-
-					if (clipMaterials.Count() < 1) continue;
-
-					EditorGUILayout.ObjectField(clip, typeof(AnimationClip), false);
-					EditorGUI.indentLevel += 2;
-
-					allMats.AddRange(clipMaterials);
-
-					foreach (Material m in clipMaterials)
+					VRCAvatarDescriptor descriptor = obj.GetComponent<VRCAvatarDescriptor>();
+					if (descriptor != null)
 					{
-						EditorGUILayout.ObjectField(m, typeof(Material), false);
+						IEnumerable<AnimationClip> clips = descriptor.baseAnimationLayers.Select(l => l.animatorController).Where(a => a != null).SelectMany(a => a.animationClips).Distinct();
+						foreach (AnimationClip clip in clips)
+						{
+							IEnumerable<Material> clipMaterials = AnimationUtility.GetObjectReferenceCurveBindings(clip).Where(b => b.isPPtrCurve && b.type.IsSubclassOf(typeof(Renderer)) && b.propertyName.StartsWith("m_Materials")).SelectMany(b => AnimationUtility.GetObjectReferenceCurve(clip, b)).Select(r => r.value as Material);
+							if (clipMaterials.Count() < 1) continue;
+							allMats.AddRange(clipMaterials);
+							foreach (Material m in clipMaterials)
+							{
+								LclipMats.Add(Tuple.Create(clip,m));
+							}
+						}
 					}
-					EditorGUI.indentLevel -= 2;
 				}
-			}
+
+				if (LclipMats.Count() > 0)
+				{
+					EditorGUILayout.Space();
+					GUILayout.Label("Animators (Animation)", EditorStyles.boldLabel);
+					object prev = null;
+					foreach (Tuple<AnimationClip, Material> tup in LclipMats)
+					{
+						if (tup.Item1 != prev)
+						{
+							EditorGUILayout.ObjectField(tup.Item1, typeof(AnimationClip), false);
+						}
+						EditorGUI.indentLevel += 2;
+						EditorGUILayout.ObjectField(tup.Item2, typeof(Material), false);
+						EditorGUI.indentLevel -= 2;
+						prev = tup.Item1;
+					}
+				}
+
 #endif
 
 			EditorGUILayout.Space();
@@ -122,6 +150,8 @@ public class MaterialList: EditorWindow
 			EditorGUILayout.Space();
 
 			EditorGUILayout.EndScrollView();
+
+			lastobj = obj;
 		}
 	}
 }
