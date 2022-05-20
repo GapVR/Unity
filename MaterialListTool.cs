@@ -34,6 +34,7 @@ public class MaterialList: EditorWindow
 	List<SkinnedMeshRenderer> rendererSkinned;
 	List<MeshRenderer> rendererMesh;
 	List<Tuple<AnimationClip, Material>> LclipMats;
+	int LClipCount;
 
 	void OnInspectorUpdate()
 	{
@@ -63,6 +64,7 @@ public class MaterialList: EditorWindow
 			{
 				allMats.Clear();
 				LclipMats.Clear();
+				LClipCount = 0;
 			}
 
 			EditorGUILayout.Space();
@@ -114,6 +116,7 @@ public class MaterialList: EditorWindow
 							foreach (Material m in clipMaterials)
 							{
 								LclipMats.Add(Tuple.Create(clip,m));
+								LClipCount++;
 							}
 						}
 					}
@@ -122,7 +125,7 @@ public class MaterialList: EditorWindow
 				if (LclipMats.Count() > 0)
 				{
 					EditorGUILayout.Space();
-					GUILayout.Label("Animators (Animation)", EditorStyles.boldLabel);
+					GUILayout.Label("Animation ("+LClipCount+")", EditorStyles.boldLabel);
 					object prev = null;
 					foreach (Tuple<AnimationClip, Material> tup in LclipMats)
 					{
