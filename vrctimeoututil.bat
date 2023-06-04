@@ -5,10 +5,10 @@ REM == SETTINGS ===
 
 REM Path to VRChat shortcut (Windows .lnk Shortcut file)
 REM **CHANGE THE FOLLOWING LINE**
-SET _VRCSHORTCUT=C:\Users\User\Desktop\VRChat.lnk
+SET _VRCSHORTCUT=%USERPROFILE%\Desktop\VRChat.lnk
 
 REM Path to VRC Profile directory (no trailing slash)
-SET _VRCPROFILE=%APPDATA%\..\LocalLow\VRChat\VRChat
+SET _VRCPROFILE=%USERPROFILE%\AppData\LocalLow\VRChat\VRChat
 
 REM Time in seconds to check for disconnects.
 SET _SLEEPSECS=300
