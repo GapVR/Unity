@@ -1,5 +1,5 @@
 @echo off
-REM VRChat Timeout Restart Utility 20230604 @gin_vrc
+title VRChat Timeout Restart Utility 20230604 @gin_vrc
 
 REM == SETTINGS ===
 
