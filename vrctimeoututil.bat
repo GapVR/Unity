@@ -1,10 +1,10 @@
 @echo off
-title VRChat Timeout Restart Utility 20230604 @gin_vrc
+title VRChat Timeout Restart Utility 20230605 @gin_vrc
 
 REM == SETTINGS ===
 
 REM Path to VRChat executable (shortcut or exe)
-SET _VRCSHORTCUT=%USERPROFILE%\Desktop\VRChat.lnk
+SET _VRCSHORTCUT=%USERPROFILE%\Desktop\VRC.lnk
 
 REM Path to VRC Profile directory (no trailing slash)
 SET _VRCPROFILE=%APPDATA%\..\LocalLow\VRChat\VRChat
@@ -70,10 +70,19 @@ GOTO sleep
 ECHO Disconnected. Restarting in %_GRACESECS% seconds...
 timeout %_GRACESECS% /nobreak >NUL
 
+IF DEFINED _DESTS IF "%_DESTS:~18,4%" == "wrld" SET _DESTSBAK=%_DESTS%
+IF DEFINED _DESTS IF "%_DESTS:~18,4%" == "wrld" SET _DESTIBAK=%_DESTI%
+
 FOR /F "tokens=1,4 delims=[]" %%N IN ('FIND /n ^"[Behaviour] Destination set^" ^"%_LOGFILE%^" 2^>NUL') DO (
 SET _DESTI=%%N
 SET _DESTS=%%O
 )
+IF "%_DESTI:~0,1%" == "-" (
+ECHO Using previous Destination.
+SET _DESTS=NULL
+)
+IF NOT "%_DESTS:~18,4%" == "wrld" SET _DESTI=%_DESTIBAK%
+IF NOT "%_DESTS:~18,4%" == "wrld" SET _DESTS=%_DESTSBAK%
 IF %_DISCO% GTR %_DESTI% (
 GOTO killvrc
 )
@@ -83,7 +92,7 @@ REM == FUNCTIONS ===
 
 :sleep
 timeout %_SLEEPSECS% /nobreak >NUL
-goto main
+GOTO main
 
 :killvrc
 taskkill /F /IM VRChat.exe
@@ -95,13 +104,13 @@ IF %ERRORLEVEL% EQU 1 GOTO startvrc
 IF %ERRORLEVEL% EQU 0 GOTO taskvrc
 
 :startvrc
-echo "%_DESTS%"
+ECHO "vrchat://launch?id=%_DESTS:~18%"
 IF %_VRCSHORTCUT% EQU 0 (
 start "" "vrchat://launch?id=%_DESTS:~18%"
 ) ELSE (
 start "" "%_VRCSHORTCUT%" "vrchat://launch?id=%_DESTS:~18%"
 )
-goto sleep
+GOTO sleep
 
 :exit
 
