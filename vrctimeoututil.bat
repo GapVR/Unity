@@ -3,8 +3,8 @@ title VRChat Timeout Restart Utility 20230605 @gin_vrc
 
 REM == SETTINGS ===
 
-REM Path to VRChat executable (shortcut or exe)
-SET _VRCSHORTCUT=%USERPROFILE%\Desktop\VRC.lnk
+REM Path to VRChat executable or shortcut (optional)
+SET _VRCSHORTCUT=%USERPROFILE%\Desktop\VRChat.lnk
 
 REM Path to VRC Profile directory (no trailing slash)
 SET _VRCPROFILE=%APPDATA%\..\LocalLow\VRChat\VRChat
