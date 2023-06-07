@@ -1,5 +1,5 @@
 @echo off
-title VRChat Timeout Restart Utility 20230605 @gin_vrc
+title VRChat Timeout Restart Utility 20230607 @gin_vrc
 
 REM == SETTINGS ===
 
@@ -70,8 +70,8 @@ GOTO sleep
 ECHO Disconnected. Restarting in %_GRACESECS% seconds...
 timeout %_GRACESECS% /nobreak >NUL
 
-IF DEFINED _DESTS IF "%_DESTS:~18,4%" == "wrld" SET _DESTSBAK=%_DESTS%
-IF DEFINED _DESTS IF "%_DESTS:~18,4%" == "wrld" SET _DESTIBAK=%_DESTI%
+IF DEFINED %_DESTS% IF "%_DESTS:~18,4%" == "wrld" SET _DESTSBAK=%_DESTS%
+IF DEFINED %_DESTS% IF "%_DESTS:~18,4%" == "wrld" SET _DESTIBAK=%_DESTI%
 
 FOR /F "tokens=1,4 delims=[]" %%N IN ('FIND /n ^"[Behaviour] Destination set^" ^"%_LOGFILE%^" 2^>NUL') DO (
 SET _DESTI=%%N
