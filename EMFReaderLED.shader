@@ -94,23 +94,23 @@ Shader "VOIDKoubou/EMFReaderLED"
 			GetBestLights(LightType, orificeType, orificePositionTracker, orificeNormalTracker, penetratorPositionTracker, pl);
 
 			float distanceToOrifice = length( orificePositionTracker );
-			float distanceToNormal = length( orificeNormalTracker );
-			float distanceToPenetrator = length( penetratorPositionTracker );
+			//float distanceToNormal = length( orificeNormalTracker );
+			//float distanceToPenetrator = length( penetratorPositionTracker );
 
 			float closest;
-			if ((distanceToOrifice > 0) && (distanceToOrifice < 1000))
+			//if ((distanceToOrifice > 0) && (distanceToOrifice < 1000))
 				closest = distanceToOrifice;
-			if ((distanceToNormal > 0) && (distanceToNormal < 1000))
-				closest = min(closest,distanceToNormal);
-			if ((distanceToPenetrator > 0) && (distanceToPenetrator < 1000))
-				closest = min(closest,distanceToPenetrator);
+			//if ((distanceToNormal > 0) && (distanceToNormal < 1000))
+			//	closest = min(closest,distanceToNormal);
+			//if ((distanceToPenetrator > 0) && (distanceToPenetrator < 1000))
+			//	closest = min(closest,distanceToPenetrator);
 
 			if (LightType > 0)
 			{
 				if (closest < 1)
 					o.Albedo = lerp(float3(1.0,0.1,0.1),float3(0.1,1.0,0.1),saturate(tan(_Time*33)));
 				else
-					o.Albedo = lerp(float3(1.0,0.1,0.1),float3(0.1,1.0,0.1),saturate((distanceToOrifice-2)/29.0));
+					o.Albedo = lerp(float3(1.0,0.1,0.1),float3(0.1,1.0,0.1),saturate((closest-2)/29.0));
 			}
 			else
 			{
