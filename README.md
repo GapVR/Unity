@@ -7,7 +7,7 @@
 ### Unity Editor (V〇C)
 - [AutoToggleCreator.cs](AutoToggleCreator.cs)<br>
 - [ilo pi lipu sitelen.png](ilo%20pi%20lipu%20sitelen.png)<br>
-- [GestureWeightSmooth.unitypackage](GestureWeightSmooth.unitypackage) | [GestureWeightSmooth.zip](GestureWeightSmooth.zip)
+- [GestureWeightSmooth.unitypackage](GestureWeightSmooth.unitypackage) | [GestureWeightSmooth.zip](GestureWeightSmooth.zip) @ [hai-vr CGE](https://github.com/hai-vr/combo-gesture-expressions-av3)
 ### ツール|Tools
 - [totp2clip.py](totp2clip.py)<br>
 - [argrewrite.c](argrewrite.c)<br>
