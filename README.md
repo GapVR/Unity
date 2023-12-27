@@ -1,4 +1,5 @@
 ### ShaderLab
+- [LightTrackingVertex.shader](LightTrackingVertex.shader)
 - [TexToPixel.shader](TexToPixel.shader)<br>
 [<img src="img/FTSDVxBUUAAwBiB.png" height=150>](img/FTSDVxBUUAAwBiB.png)
 ### Unity Editor
