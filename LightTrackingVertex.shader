@@ -90,7 +90,7 @@
 			const float3 boneALocalPosition = v.vertex.xyz - origin;
 			const float3 boneBLocalPosition = v.vertex.xyz - originB;
 
-			if (lightDist < _MinDistance && (lightDist < _MaxDistance || _MaxDistance == 0))
+			if (lightDist > _MinDistance && (lightDist < _MaxDistance || _MaxDistance == 0))
 			{
 				v.vertex = float4((boneALocalPosition + origin) * weightA + (boneBLocalPosition + lightPosObj) * weightB, 1);
 
