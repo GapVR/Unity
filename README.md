@@ -7,6 +7,7 @@
 [<img src="img/FTM2NR2aAAAz1mJ.png" height=150>](img/FTM2NR2aAAAz1mJ.png)
 ### Unity Editor
 - [BlendTreeToggleHowTo.png](BlendTreeToggleHowTo.png)<br>
+[<img src="BlendTreeToggleHowTo.png" height=150>](BlendTreeToggleHowTo.png)
 - [AutoToggleCreator.cs](AutoToggleCreator.cs)<br>
 - [ilo pi lipu sitelen.png](ilo%20pi%20lipu%20sitelen.png)<br>
 - [GestureWeightSmooth.unitypackage](GestureWeightSmooth.unitypackage) | [GestureWeightSmooth.zip](GestureWeightSmooth.zip) @ [hai-vr CGE](https://github.com/hai-vr/combo-gesture-expressions-av3)
