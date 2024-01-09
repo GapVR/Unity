@@ -31,25 +31,25 @@ namespace takowasabi
 			}
 		}
 
-		[MenuItem("Q Quick/1	Controller: FX")]
+		[MenuItem("Q Quick/1	Layers: FX")]
 		private static void OA4() { OpenAsset(4); }
 
-		[MenuItem("Q Quick/2	Controller: Gesture")]
+		[MenuItem("Q Quick/2	Layers: Gesture")]
 		private static void OA2() { OpenAsset(2); }
 
-		[MenuItem("Q Quick/3	Controller: Base")]
+		[MenuItem("Q Quick/3	Layers: Base")]
 		private static void OA0() { OpenAsset(0); }
 
-		[MenuItem("Q Quick/4	Controller: Additive")]
+		[MenuItem("Q Quick/4	Layers: Additive")]
 		private static void OA1() { OpenAsset(1); }
 
-		[MenuItem("Q Quick/5	Controller: Action")]
+		[MenuItem("Q Quick/5	Layers: Action")]
 		private static void OA3() { OpenAsset(3); }
 
 		[MenuItem("Q Quick/W	Expressions: Menu")]
 		private static void OA11() { OpenAsset(11); }
 
-		[MenuItem("Q Quick/E	Expressions: Params")]
+		[MenuItem("Q Quick/E	Expressions: Parameters")]
 		private static void OA12() { OpenAsset(12); }
 
 		[MenuItem("Q Quick/A	Select: Armature (Head)")]
