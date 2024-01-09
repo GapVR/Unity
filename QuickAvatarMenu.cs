@@ -1,3 +1,5 @@
+// Quick Avatar Menu Tool
+// v0.1 240109 https://github.com/GapVR
 // Press Alt+Q, then press the menu item key
 #if UNITY_EDITOR && VRC_SDK_VRCSDK3 && !UDON
 using System;
