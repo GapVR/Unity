@@ -47,7 +47,7 @@ https://github.com/clarte53/openvr-tracking
 
 #include "openvr.h"
 
-bool lastTrack[10] = {0};
+bool lastTrack[20] = {0};
 vr::TrackedDevicePose_t poses[vr::k_unMaxTrackedDeviceCount];
 
 std::string OSChost{"127.0.0.1"};
