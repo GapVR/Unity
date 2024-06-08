@@ -120,6 +120,7 @@ int main(int argc, const char* argv[])
 
 			for (vr::TrackedDeviceIndex_t idx = 1; idx < vr::k_unMaxTrackedDeviceCount; ++idx)
 			{
+				if (!(vr_system->IsTrackedDeviceConnected(idx))) continue;
 
 				int currtype = 0;
 
@@ -129,8 +130,6 @@ int main(int argc, const char* argv[])
 
 				vr_system->GetStringTrackedDeviceProperty(idx, vr::ETrackedDeviceProperty::Prop_ControllerType_String, buffer, 1024);
 				std::string type(buffer);
-
-				if (!(vr_system->IsTrackedDeviceConnected(idx))) continue;
 
 				if (trackedDeviceClass == vr::ETrackedDeviceClass::TrackedDeviceClass_Controller)
 				{
