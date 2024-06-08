@@ -1,6 +1,5 @@
 ### OpenVR
-- [OSClstrk.cpp](https://raw.githubusercontent.com/GapVR/Unity/main/OSClstrk.cpp)
-- [OSClstrk-MA-LHRH.unitypackage](https://github.com/GapVR/Unity/raw/main/OSClstrk-MA-LHRH.unitypackage) (Modular Avatar)
+- [OSClstrk_v0.1.zip](https://raw.githubusercontent.com/GapVR/Unity/main/OSClstrk_v0.1.zip) - [OSClstrk.cpp](https://raw.githubusercontent.com/GapVR/Unity/main/OSClstrk.cpp)
 ### Unity Editor
 - [QuickAvatarMenu.cs](https://raw.githubusercontent.com/GapVR/Unity/main/QuickAvatarMenu.cs)<br>
 [<img src="img/QuickAvatarMenu.png" height=150>](img/QuickAvatarMenu.png)
