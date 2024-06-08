@@ -130,6 +130,8 @@ int main(int argc, const char* argv[])
 				vr_system->GetStringTrackedDeviceProperty(idx, vr::ETrackedDeviceProperty::Prop_ControllerType_String, buffer, 1024);
 				std::string type(buffer);
 
+				if (!(vr_system->IsTrackedDeviceConnected(idx))) continue;
+
 				if (trackedDeviceClass == vr::ETrackedDeviceClass::TrackedDeviceClass_Controller)
 				{
 					vr::ETrackedControllerRole role = vr_system->GetControllerRoleForTrackedDeviceIndex(idx);
@@ -172,13 +174,13 @@ int main(int argc, const char* argv[])
 				{
 					if (poses[idx].bPoseIsValid == false)
 					{
-						std::cout << timestr << " [" << type << "#" << serial << "] LOST !" << std::endl;
+						std::cout << timestr << " #" << idx << " [" << type << "|" << serial << "] LOST !" << std::endl;
 						lastTrack[currtype] = false;
 					}
 				} else {
 					if (poses[idx].bPoseIsValid == true)
 					{
-						std::cout << timestr << " [" << type << "#" << serial << "] Tracking" << std::endl;
+						std::cout << timestr << " #" << idx << " [" << type << "|" << serial << "] Tracking" << std::endl;
 						lastTrack[currtype] = true;
 					}
 				}
