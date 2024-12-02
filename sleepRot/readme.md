@@ -18,7 +18,7 @@
 
 <img src="sleepRot_howto6.png">
 
-### 睡眠Idle（横向き）の調整
+### 「睡眠Idle（横向き）」アニメーションの調整
 
 <img src="sleepRot_howto3.png">
 
