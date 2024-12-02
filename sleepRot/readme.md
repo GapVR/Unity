@@ -21,3 +21,19 @@
 ### 睡眠Idle（横向き）の調整
 
 <img src="sleepRot_howto3.png">
+
+ルートトランスフォームのRotation:
+
+Offset: 90
+
+削除されたプロパティ:
+
+Animator.Head Nod Down-Up
+
+Animator.Head Tilt Left-Right
+
+Animator.Head Turn Left-Right
+
+Animator.Neck Nod Down-Up
+
+Animator.Neck Tilt Left-Right
