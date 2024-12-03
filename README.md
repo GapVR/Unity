@@ -51,7 +51,7 @@
 
 ## RemoveCrunchCompression (Unity Editor)
 
-**[(Download/ダウンロード) RemoveCrunchCompression.cs v0.1](https://github.com/GapVR/Unity/raw/refs/heads/main/RemoveCrunchCompression.cs)**
+**[(Download/ダウンロード) RemoveCrunchCompression.cs v0.2](https://github.com/GapVR/Unity/raw/refs/heads/main/RemoveCrunchCompression.cs)**
 
 - プロジェクト全体的にテスクチャファイルの「クランチ圧縮」を無効するツール
 - Tool to disable Crunch Compression in all textures.
