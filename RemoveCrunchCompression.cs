@@ -1,5 +1,7 @@
 // Unity Editor Remove Crunch Compression Tool
-// v0.1 241203 https://github.com/GapVR
+// v0.2 241204 https://github.com/GapVR
+
+#if UNITY_EDITOR
 
 using UnityEngine;
 using UnityEditor;
@@ -32,3 +34,5 @@ public class RemoveCrunchCompression : EditorWindow
 		Debug.Log($"RemoveCrunchCompression: Done. Processed {i} files.");
 	}
 }
+
+#endif
