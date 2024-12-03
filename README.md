@@ -51,14 +51,20 @@
 
 ## RemoveCrunchCompression (Unity Editor)
 
+- プロジェクト全体的にテスクチャファイルの「クランチ圧縮」を無効するツール
+- Tool to disable Crunch Compression in all textures.
+
 **[(Download/ダウンロード) RemoveCrunchCompression.cs v0.1](https://github.com/GapVR/Unity/raw/refs/heads/main/RemoveCrunchCompression.cs)**
 
 ## AutoToggleCreator (Unity Editor+VRC Avatar)
 
+- アバターのオブジェクトのトグルを作成するツール
+- Create toggles for avatar objects.
+
 **[(Download/ダウンロード) AutoToggleCreator.cs](https://raw.githubusercontent.com/GapVR/Unity/main/AutoToggleCreator.cs)**
 
 ## GestureWeightSmooth (VRC Avatar Controller)
-  
+ 
 **[(Download/ダウンロード) GestureWeightSmooth.unitypackage](https://raw.githubusercontent.com/GapVR/Unity/main/GestureWeightSmooth.unitypackage)**
 
 **[(Download/ダウンロード) GestureWeightSmooth.zip](https://raw.githubusercontent.com/GapVR/Unity/main/GestureWeightSmooth.zip)**
