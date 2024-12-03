@@ -1,6 +1,22 @@
+- OpenVR
+  - [OSClstrk (SteamVR+VRC Avatar+OSC, C)](https://github.com/GapVR/Unity#osclstrk-steamvrvrc-avatar-c)
+- Unity
+  - [QuickAvatarMenu (Unity Editor+VRC Avatar)](https://github.com/GapVR/Unity#quickavatarmenu-unity-editorvrc-avatar)
+  - [MaterialListTool (Unity Editor)](https://github.com/GapVR/Unity#materiallisttool-unity-editor)
+  - [RemoveCrunchCompression (Unity Editor)](https://github.com/GapVR/Unity#removecrunchcompression-unity-editor)
+  - [AutoToggleCreator (Unity Editor+VRC Avatar)](https://github.com/GapVR/Unity#autotogglecreator-unity-editorvrc-avatar)
+  - [GestureWeightSmooth (VRC Avatar Controller)](https://github.com/GapVR/Unity#gestureweightsmooth-vrc-avatar-controller)
+- ShaderLab
+  - [LightTrackingVertex.shader](https://github.com/GapVR/Unity#lighttrackingvertexshader)
+  - [TexToPixel.shader](https://github.com/GapVR/Unity#textopixelshader)
+- Tools
+  - [totp2clip.py (Python)](https://github.com/GapVR/Unity#totp2clippy-python)
+
+-----
+
 # OpenVR
 
-## OSClstrk (SteamVR+VRC Avatar, C)
+## OSClstrk (SteamVR+VRC Avatar+OSC, C)
 
 **[(Download/ダウンロード) OSClstrk_v0.1.zip](https://raw.githubusercontent.com/GapVR/Unity/main/OSClstrk_v0.1.zip)**
 
@@ -71,20 +87,22 @@
 
 ## totp2clip.py (Python)
 
-- OTP(2FA)の確認コードを生成するスクリプト
-- Generate verification code for 2FA login.
+- 2FAの確認コードをクリップボードに生成するスクリプト
+- Generate a verification code for 2FA login and copies it to clipboard.
 
 **[(Download/ダウンロード) totp2clip.py](https://raw.githubusercontent.com/GapVR/Unity/main/totp2clip.py)**
 
-## argrewrite (C)
+## ~~argrewrite (C)~~
+
+-  (Deprecated/非推奨)
 
 **[(Download/ダウンロード) argrewrite.c](https://raw.githubusercontent.com/GapVR/Unity/main/argrewrite.c)**
 
 **[(Download/ダウンロード) argrewrite-ytdl.zip](https://raw.githubusercontent.com/GapVR/Unity/main/argrewrite-ytdl.zip)**
 
-# Tools|ツール (VRC)
-
 ## ~~vrctimeoututil (cmd.exe)~~ (Deprecated/非推奨)
+
+- (Deprecated/非推奨)
 - タイムアウトまたはエラーワールド時にVRCを再起動するツール
 - Utility to restart VRC on timeout or error world.
 
