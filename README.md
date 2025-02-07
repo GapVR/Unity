@@ -1,16 +1,17 @@
 - OpenVR
-  - [OSClstrk (SteamVR+VRC Avatar+OSC, C)](https://github.com/GapVR/Unity#osclstrk-steamvrvrc-avatar-c)
+  - [OSClstrk (SteamVR+VRC Avatar+OSC, C)](#osclstrk-steamvrvrc-avatarosc-c)
 - Unity
-  - [QuickAvatarMenu (Unity Editor+VRC Avatar)](https://github.com/GapVR/Unity#quickavatarmenu-unity-editorvrc-avatar)
-  - [MaterialListTool (Unity Editor)](https://github.com/GapVR/Unity#materiallisttool-unity-editor)
-  - [RemoveCrunchCompression (Unity Editor)](https://github.com/GapVR/Unity#removecrunchcompression-unity-editor)
-  - [AutoToggleCreator (Unity Editor+VRC Avatar)](https://github.com/GapVR/Unity#autotogglecreator-unity-editorvrc-avatar)
-  - [GestureWeightSmooth (VRC Avatar Controller)](https://github.com/GapVR/Unity#gestureweightsmooth-vrc-avatar-controller)
+  - [(Auto) Animation Hierarchy Editor](#auto-animation-hierarchy-editor-unity-editor-fork)
+  - [QuickAvatarMenu (Unity Editor+VRC Avatar)](#quickavatarmenu-unity-editorvrc-avatar)
+  - [MaterialListTool (Unity Editor)](#materiallisttool-unity-editor)
+  - [RemoveCrunchCompression (Unity Editor)](#removecrunchcompression-unity-editor)
+  - [AutoToggleCreator (Unity Editor+VRC Avatar)](#autotogglecreator-unity-editorvrc-avatar)
+  - [GestureWeightSmooth (VRC Avatar Controller)](#gestureweightsmooth-vrc-avatar-controller)
 - ShaderLab
-  - [LightTrackingVertex.shader](https://github.com/GapVR/Unity#lighttrackingvertexshader)
-  - [TexToPixel.shader](https://github.com/GapVR/Unity#textopixelshader)
+  - [LightTrackingVertex.shader](#lighttrackingvertexshader)
+  - [TexToPixel.shader](#textopixelshader)
 - Tools
-  - [totp2clip.py (Python)](https://github.com/GapVR/Unity#totp2clippy-python)
+  - [totp2clip.py (Python)](#totp2clippy-python)
 
 -----
 
