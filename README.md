@@ -26,6 +26,16 @@
 
 # Unity
 
+## [(Auto) Animation Hierarchy Editor](https://github.com/GapVR/Unity-Animation-Hierarchy-Editor) (Unity Editor, fork)
+
+**[(Download/ダウンロード) AutoAnimationHierarchyEditor.cs 20250207](https://github.com/GapVR/Unity-Animation-Hierarchy-Editor/releases/download/1.0/AutoAnimationHierarchyEditor.cs)**
+
+[<img src="https://raw.githubusercontent.com/GapVR/Unity-Animation-Hierarchy-Editor/refs/heads/master/AAHE_screenshot.png" height=150>](https://raw.githubusercontent.com/GapVR/Unity-Animation-Hierarchy-Editor/refs/heads/master/AAHE_screenshot.png)
+
+- 壊れたアニメーションファイルを修正するツール
+- Semi-automated tool to fix broken animation paths from missing gameobjects.
+- メニュー/Menu : Tools > Auto Animation Hierarchy Editor
+
 ## QuickAvatarMenu (Unity Editor+VRC Avatar)
 
 **[(Download/ダウンロード) QuickAvatarMenu.cs v0.1](https://raw.githubusercontent.com/GapVR/Unity/main/QuickAvatarMenu.cs)**
