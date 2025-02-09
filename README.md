@@ -9,6 +9,7 @@
   - [AutoToggleCreator (Unity Editor+VRC Avatar)](#autotogglecreator-unity-editorvrc-avatar)
   - [GestureWeightSmooth (VRC Avatar Controller)](#gestureweightsmooth-vrc-avatar-controller)
 - ShaderLab
+  - [VoronoiCrystal.shader](#voronoicrystalshader)
   - [LightTrackingVertex.shader](#lighttrackingvertexshader)
   - [TexToPixel.shader](#textopixelshader)
 - Tools
@@ -93,6 +94,10 @@
 - [hai-vr CGE](https://github.com/hai-vr/combo-gesture-expressions-av3)
 
 # ShaderLab
+
+## VoronoiCrystal.shader
+
+**[(Download/ダウンロード) VoronoiCrystal.shader](https://raw.githubusercontent.com/GapVR/Unity/main/VoronoiCrystal.shader)**
 
 ## LightTrackingVertex.shader
 
