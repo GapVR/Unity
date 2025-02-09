@@ -1,6 +1,7 @@
 - OpenVR
   - [OSClstrk (SteamVR+VRC Avatar+OSC, C)](#osclstrk-steamvrvrc-avatarosc-c)
 - Unity
+  - [Render Material To Texture](#render-material-to-texture-unity-editor) 
   - [(Auto) Animation Hierarchy Editor](#auto-animation-hierarchy-editor-unity-editor-fork)
   - [QuickAvatarMenu (Unity Editor+VRC Avatar)](#quickavatarmenu-unity-editorvrc-avatar)
   - [MaterialListTool (Unity Editor)](#materiallisttool-unity-editor)
@@ -26,6 +27,14 @@
 - [(Source/ソースコード) OSClstrk.cpp](https://raw.githubusercontent.com/GapVR/Unity/main/OSClstrk.cpp)
 
 # Unity
+
+## Render Material To Texture (Unity Editor)
+
+**[(Download/ダウンロード) RenderMaterialToTexture.cs](https://raw.githubusercontent.com/GapVR/Unity/refs/heads/main/RenderMaterialToTexture.cs)**
+
+[<img src="img/GjYELzPakAAn9uh.png" height=150>](img/GjYELzPakAAn9uh.png)
+
+- Material → PNG
 
 ## [(Auto) Animation Hierarchy Editor](https://github.com/GapVR/Unity-Animation-Hierarchy-Editor) (Unity Editor, fork)
 
