@@ -1,5 +1,7 @@
 // Quick Avatar Menu Tool
-// v0.1 240109 https://github.com/GapVR
+// v0.2 250209 Added: Print World Position
+// v0.1 240109 Initial version.
+// https://github.com/GapVR
 // Press Alt+Q, then press the menu item key
 #if UNITY_EDITOR && VRC_SDK_VRCSDK3 && !UDON
 using System;
@@ -57,6 +59,16 @@ namespace takowasabi
 
 		[MenuItem("Q Quick/Q	Select: Avatar")]
 		private static void OA100() { OpenAsset(100); }
+
+		[MenuItem("Q Quick/P	Print: World Position")]
+		private static void WorldPos()
+		{
+			string buf = "";
+			foreach (GameObject obj in Selection.gameObjects)
+				buf += obj.name + " " + obj.transform.position + "\n";
+			if (buf != "")
+				EditorUtility.DisplayDialog("WorldPos", buf, "OK");
+		}
 	}
 }
 #endif
