@@ -39,7 +39,7 @@
 
 ## QuickAvatarMenu (Unity Editor+VRC Avatar)
 
-**[(Download/ダウンロード) QuickAvatarMenu.cs v0.1](https://raw.githubusercontent.com/GapVR/Unity/main/QuickAvatarMenu.cs)**
+**[(Download/ダウンロード) QuickAvatarMenu.cs v0.2](https://raw.githubusercontent.com/GapVR/Unity/main/QuickAvatarMenu.cs)**
 
 [<img src="img/QuickAvatarMenu.png" height=150>](img/QuickAvatarMenu.png)
 
@@ -50,6 +50,7 @@
   - ALT+Q + E: Avatar Parameters/パラメーター
   - ALT+Q + A: Select Head/Headを選択する
   - ALT+Q + Q: Select Avatar/アバターを選択する
+  - ALT+Q + W: Print World Position/グロバル座標の位置を表示する
 
 ## MaterialListTool (Unity Editor)
 
