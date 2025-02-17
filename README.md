@@ -1,6 +1,7 @@
 - OpenVR
   - [OSClstrk (SteamVR+VRC Avatar+OSC, C)](#osclstrk-steamvrvrc-avatarosc-c)
 - Unity
+  - [BlendshapeNamedCopyPaste (Unity Editor)](#blendshapenamedcopypaste-unity-editor) 
   - [Render Material To Texture](#render-material-to-texture-unity-editor) 
   - [(Auto) Animation Hierarchy Editor](#auto-animation-hierarchy-editor-unity-editor-fork)
   - [QuickAvatarMenu (Unity Editor+VRC Avatar)](#quickavatarmenu-unity-editorvrc-avatar)
@@ -28,6 +29,17 @@
 - [(Source/ソースコード) OSClstrk.cpp](https://raw.githubusercontent.com/GapVR/Unity/main/OSClstrk.cpp)
 
 # Unity
+
+## BlendshapeNamedCopyPaste (Unity Editor)
+
+**[(Download/ダウンロード) BlendshapeNamedCopyPaste.cs](https://raw.githubusercontent.com/GapVR/Unity/refs/heads/main/BlendshapeNamedCopyPaste.cs)**
+
+[<img src="img/Gj_4hTqbwAAib4g.png" height=150>](img/Gj_4hTqbwAAib4g.png)
+
+- ブレンドシェイプ名を使って異なる/変更されたモデルにコピペできるようにするツール
+- Copy and paste blendshapes using blendshape name, allowing import/export to different/changed models.
+  - Paste (Source: Non-Zero): Import only if the blendshape value in the clipboard is bigger than zero./クリップボードのブレンドシェイプ値が>0の場合のみインポートする
+  - Paste (Target: Zero only): Import only if the object's blendshape is zero./オブジェクトのブレンドシェイプがゼロの場合のみインポートする
 
 ## Render Material To Texture (Unity Editor)
 
