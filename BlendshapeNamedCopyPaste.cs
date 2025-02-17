@@ -1,5 +1,7 @@
 // BlendshapeNamedCopyPaste
-// v0.1 250122 https://github.com/GapVR
+// https://github.com/GapVR
+// v0.2 250217 - no index copy
+// v0.1 250122 - initial version
 
 #if UNITY_EDITOR
 
@@ -59,8 +61,7 @@ public class BlendshapeNamedCopyPaste : Editor
 		Debug.Log("BlendshapeNamedCopyPaste: Paste done.");
 	}
 
-	[MenuItem("Tools/BlendshapeNamedCopyPaste/&Copy")]
-	public static void ExportClipboard()
+	public static void ExportClipboard (int exportMode)
 	{
 		GameObject obj = Selection.activeGameObject;
 		if (obj == null)
@@ -70,16 +71,35 @@ public class BlendshapeNamedCopyPaste : Editor
 		if (smk == null)
 			return;
 
-		string strbuf = "<name>,<weight>,<index>\n";
+		string strbuf;
+		if (exportMode == 1)
+			strbuf = "<name>,<weight>,<index>\n";
+		else
+			strbuf = "<name>,<weight>\n";
 		for (int i = 0; i < smk.sharedMesh.blendShapeCount; i++)
 		{
 			string name = smk.sharedMesh.GetBlendShapeName(i);
 			float weight = smk.GetBlendShapeWeight(i);
-			strbuf += $"{name},{weight},{i}\n";
+			if (exportMode == 1)
+				strbuf += $"{name},{weight},{i}\n";
+			else
+				strbuf += $"{name},{weight}\n";
 		}
 
 		EditorGUIUtility.systemCopyBuffer = strbuf;
 		Debug.Log("BlendshapeNamedCopyPaste: Copy done.");
+	}
+
+	[MenuItem("Tools/BlendshapeNamedCopyPaste/&Copy")]
+	public static void ExportNormal()
+	{
+		ExportClipboard(0);
+	}
+
+	[MenuItem("Tools/BlendshapeNamedCopyPaste/Copy (with index)")]
+	public static void ExportWithIndex()
+	{
+		ExportClipboard(1);
 	}
 
 	[MenuItem("Tools/BlendshapeNamedCopyPaste/Paste")]
