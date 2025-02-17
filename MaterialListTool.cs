@@ -129,7 +129,7 @@ public class MaterialList: EditorWindow
 					object prev = null;
 					foreach (Tuple<AnimationClip, Material> tup in LclipMats)
 					{
-						if (tup.Item1 != prev)
+						if (!object.ReferenceEquals(tup.Item1, prev)) // tup.Item1 != prev
 						{
 							EditorGUILayout.ObjectField(tup.Item1, typeof(AnimationClip), false);
 						}
