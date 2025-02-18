@@ -1,6 +1,7 @@
 - OpenVR
   - [OSClstrk (SteamVR+VRC Avatar+OSC, C)](#osclstrk-steamvrvrc-avatarosc-c)
 - Unity
+  - [Memo Component (Unity Editor)](#memocomponent-unity-editor)
   - [BlendshapeNamedCopyPaste (Unity Editor)](#blendshapenamedcopypaste-unity-editor) 
   - [Render Material To Texture](#render-material-to-texture-unity-editor) 
   - [(Auto) Animation Hierarchy Editor](#auto-animation-hierarchy-editor-unity-editor-fork)
@@ -29,6 +30,15 @@
 - [(Source/ソースコード) OSClstrk.cpp](https://raw.githubusercontent.com/GapVR/Unity/main/OSClstrk.cpp)
 
 # Unity
+
+## MemoComponent (Unity Editor)
+
+**[(Download/ダウンロード) MemoComponent.cs](https://raw.githubusercontent.com/GapVR/Unity/refs/heads/main/MemoComponent.cs)**
+
+[<img src="img/GkGwaKOaAAAeU1j.png" height=150>](img/GkGwaKOaAAAeU1j.png)
+
+- メモをコンポーネントに保存する簡単なアドオン
+- Save notes in components.
 
 ## BlendshapeNamedCopyPaste (Unity Editor)
 
