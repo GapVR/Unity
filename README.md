@@ -1,7 +1,7 @@
 <a name="top"></a>
-- OpenVR
+- <b>OpenVR</b>
   - [OSClstrk (SteamVR+VRC Avatar+OSC, C)](#osclstrk-steamvrvrc-avatarosc-c)
-- Unity
+- <b>Unity</b>
   - [Memo Component (Unity Editor)](#memocomponent-unity-editor)
   - [BlendshapeNamedCopyPaste (Unity Editor)](#blendshapenamedcopypaste-unity-editor) 
   - [Render Material To Texture](#render-material-to-texture-unity-editor) 
@@ -11,11 +11,11 @@
   - [RemoveCrunchCompression (Unity Editor)](#removecrunchcompression-unity-editor)
   - [AutoToggleCreator (Unity Editor+VRC Avatar)](#autotogglecreator-unity-editorvrc-avatar)
   - [GestureWeightSmooth (VRC Avatar Controller)](#gestureweightsmooth-vrc-avatar-controller)
-- ShaderLab
+- <b>ShaderLab</b>
   - [VoronoiCrystal.shader](#voronoicrystalshader)
   - [LightTrackingVertex.shader](#lighttrackingvertexshader)
   - [TexToPixel.shader](#textopixelshader)
-- Tools
+- <b>Tools</b>
   - [totp2clip.py (Python)](#totp2clippy-python)
 
 -----
