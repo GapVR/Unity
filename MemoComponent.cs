@@ -3,7 +3,7 @@
 using UnityEngine;
 using UnityEditor;
 
-public class MemoComponent : MonoBehaviour
+public class MemoComponent : MonoBehaviour, VRC.SDKBase.IEditorOnly
 {
 	[TextArea()]
 	public string Memo = "";
