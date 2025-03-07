@@ -64,7 +64,7 @@
 
 ## [(Auto) Animation Hierarchy Editor](https://github.com/GapVR/Unity-Animation-Hierarchy-Editor) (Unity Editor, fork)
 
-**[(Download/ダウンロード) AutoAnimationHierarchyEditor.cs 20250207](https://github.com/GapVR/Unity-Animation-Hierarchy-Editor/releases/download/1.0/AutoAnimationHierarchyEditor.cs)**
+**[(Download/ダウンロード) AutoAnimationHierarchyEditor.cs 20250307](https://github.com/GapVR/Unity-Animation-Hierarchy-Editor/releases/download/1.0/AutoAnimationHierarchyEditor.cs)**
 
 [<img src="https://raw.githubusercontent.com/GapVR/Unity-Animation-Hierarchy-Editor/refs/heads/master/AAHE_screenshot.png" height=150>](https://raw.githubusercontent.com/GapVR/Unity-Animation-Hierarchy-Editor/refs/heads/master/AAHE_screenshot.png)
 
