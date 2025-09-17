@@ -61,7 +61,8 @@
 
 [<img src="img/GjYELzPakAAn9uh.png" height=150>](img/GjYELzPakAAn9uh.png)
 
-- Material → PNG
+- マテリアル(シェーダ)の画像をPNGファイルに出力できるツール
+- Save material (shader) output to a PNG image.
 
 ## [(Auto) Animation Hierarchy Editor](https://github.com/GapVR/Unity-Animation-Hierarchy-Editor) (Unity Editor, fork)
 
@@ -124,6 +125,9 @@
 ## VoronoiCrystal.shader
 
 **[(Download/ダウンロード) VoronoiCrystal.shader](https://raw.githubusercontent.com/GapVR/Unity/main/VoronoiCrystal.shader)**
+
+- 2Dボロノイ結晶パターンを生成するシェーダー
+- Draws a 2D Voronoi crystal pattern.
 
 ## LightTrackingVertex.shader
 
