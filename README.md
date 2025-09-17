@@ -15,6 +15,7 @@
   - [VoronoiCrystal.shader](#voronoicrystalshader)
   - [LightTrackingVertex.shader](#lighttrackingvertexshader)
   - [TexToPixel.shader](#textopixelshader)
+  - [NadeShader2.shader](#nadeshader2)
 - <b>Misc</b>
   - [「チェック全入り肌のマテリアル」Skin Material for Liltoon (Unity)](#%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E5%85%A8%E5%85%A5%E3%82%8A%E8%82%8C%E3%81%AE%E3%83%9E%E3%83%86%E3%83%AA%E3%82%A2%E3%83%ABskin-material-for-liltoon-unity)
 - <b>Tools</b>
@@ -139,6 +140,13 @@
 
 - ドット絵化シェーダー
 - Pixellate textures
+
+## NadeShader2.shader
+
+**[(Download/ダウンロード) NadeShader2.shader](https://raw.githubusercontent.com/GapVR/Unity/main/NadeShader2.shader)**
+
+- （深度テクスチャの）距離に基づいて、画面に色付きオーバーレイを描画するシェーダー
+- Draws a coloured overlay to the screen based on distance to objects in the world.
 
 # Misc|その他
 
