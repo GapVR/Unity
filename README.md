@@ -1,6 +1,4 @@
 <a name="top"></a>
-- <b>OpenVR</b>
-  - [OSClstrk (SteamVR+VRC Avatar+OSC, C)](#osclstrk-steamvrvrc-avatarosc-c)
 - <b>Unity</b>
   - [Memo Component (Unity Editor)](#memocomponent-unity-editor)
   - [BlendshapeNamedCopyPaste (Unity Editor)](#blendshapenamedcopypaste-unity-editor) 
@@ -18,20 +16,12 @@
   - [NadeShader2.shader](#nadeshader2shader)
 - <b>Misc</b>
   - [「チェック全入り肌のマテリアル」Skin Material for Liltoon (Unity)](#%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E5%85%A8%E5%85%A5%E3%82%8A%E8%82%8C%E3%81%AE%E3%83%9E%E3%83%86%E3%83%AA%E3%82%A2%E3%83%ABskin-material-for-liltoon-unity)
+- <b>OpenVR</b>
+  - [OSClstrk (SteamVR+VRC Avatar+OSC, C)](#osclstrk-steamvrvrc-avatarosc-c)
 - <b>Tools</b>
   - [totp2clip.py (Python)](#totp2clippy-python)
 
 -----
-
-# OpenVR
-
-## OSClstrk (SteamVR+VRC Avatar+OSC, C)
-
-**[(Download/ダウンロード) OSClstrk_v0.1.zip](https://raw.githubusercontent.com/GapVR/Unity/main/OSClstrk_v0.1.zip)**
-
-- SteamVRでコントローラーのトラッキングがロストされた場合、アバターの腕を自動でアニメーション化するツール
-- Utility to set avatar arms to Animation when controller tracking is lost in SteamVR.
-- [(Source/ソースコード) OSClstrk.cpp](https://raw.githubusercontent.com/GapVR/Unity/main/OSClstrk.cpp)
 
 # Unity
 
@@ -157,6 +147,16 @@
 ## 「チェック全入り肌のマテリアル」Skin Material for Liltoon (Unity)
 
 **[(Download/ダウンロード) liltoonskinmaterial250220.png](https://raw.githubusercontent.com/GapVR/Unity/main/liltoonskinmaterial250220.png)**
+
+# OpenVR
+
+## OSClstrk (SteamVR+VRC Avatar+OSC, C)
+
+**[(Download/ダウンロード) OSClstrk_v0.1.zip](https://raw.githubusercontent.com/GapVR/Unity/main/OSClstrk_v0.1.zip)**
+
+- SteamVRでコントローラーのトラッキングがロストされた場合、アバターの腕を自動でアニメーション化するツール
+- Utility to set avatar arms to Animation when controller tracking is lost in SteamVR.
+- [(Source/ソースコード) OSClstrk.cpp](https://raw.githubusercontent.com/GapVR/Unity/main/OSClstrk.cpp)
 
 # Tools|ツール(汎用)
 
