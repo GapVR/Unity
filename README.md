@@ -132,8 +132,9 @@
 
 [<img src="img/FTSDVxBUUAAwBiB.png" height=150>](img/FTSDVxBUUAAwBiB.png)
 
-- ドット絵化シェーダー
-- Pixellate textures
+- スクリーンテクスチャをドット絵化するシェーダー
+- Pixellate screen texture
+-  [pixelBlock Accessory (Booth.pm商品ページ/product page)](https://www2.booth.pm/items/6790541)
 
 ## NadeShader2.shader
 
@@ -166,22 +167,6 @@
 
 - 2FAの確認コードをクリップボードに生成するスクリプト
 - Generate a verification code for 2FA login and copies it to clipboard.
-
-## ~~argrewrite (C)~~
-
-**[(Download/ダウンロード) argrewrite.c](https://raw.githubusercontent.com/GapVR/Unity/main/argrewrite.c)**
-
-**[(Download/ダウンロード) argrewrite-ytdl.zip](https://raw.githubusercontent.com/GapVR/Unity/main/argrewrite-ytdl.zip)**
-
--  (Deprecated/非推奨)
-
-## ~~vrctimeoututil (cmd.exe)~~ (Deprecated/非推奨)
-
-**[(Download/ダウンロード) vrctimeoututil.bat v20230607](https://raw.githubusercontent.com/GapVR/Unity/main/vrctimeoututil.bat)**
-
-- (Deprecated/非推奨)
-- タイムアウトまたはエラーワールド時にVRCを再起動するツール
-- Utility to restart VRC on timeout or error world.
 
 ## ガイド|Guides (VRC)
 
